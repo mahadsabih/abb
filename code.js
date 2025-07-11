@@ -8,7 +8,7 @@ app.use(express.json());
 
 const CLIENT_ID = 'xNcAoucWjyWIoWvjaBKTrx';
 const CLIENT_SECRET = 'YXTinw46G9AcjMZ0WiH1p3d8vVu84X';
-const REDIRECT_URI = 'https://abb.onrender.com/api/figma/callback';
+const REDIRECT_URI = 'https://abb-g4ew.onrender.com/api/figma/callback';
 
 app.get('/api/figma/callback', async (req, res) => {
   const { code, state } = req.query;
