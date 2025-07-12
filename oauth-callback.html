@@ -1,0 +1,14 @@
+<!-- https://abb-g4ew.onrender.com/oauth-callback.html -->
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      const hash = new URLSearchParams(window.location.hash.substring(1));
+      const token = hash.get('access_token');
+      if (token) {
+        window.opener.postMessage({ access_token: token }, '*');
+        window.close();
+      }
+    </script>
+  </body>
+</html>
